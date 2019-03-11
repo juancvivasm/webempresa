@@ -16,6 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Esto va a importar de nuestro fichero core las vistas basicas
+from core import views as core_views
+
 urlpatterns = [
+    # Paths del core
+    path('', core_views.home, name='home'),
+    path('about/', core_views.about, name='about'),
+    path('services/', core_views.services, name='services'),
+    path('store/', core_views.store, name='store'),
+    path('contact/', core_views.contact, name='contact'),
+    path('blog/', core_views.blog, name='blog'),
+    path('sample/', core_views.sample, name='sample'),
+    # Paths del admin
     path('admin/', admin.site.urls),
 ]
