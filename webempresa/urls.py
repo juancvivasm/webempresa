@@ -19,9 +19,19 @@ from django.urls import path
 # Esto va a importar de nuestro fichero core las vistas basicas
 from django.urls import include, path
 
+# Extendiendo las funciones en modo de depuracion y ver static - media
+from django.conf import settings
+
 urlpatterns = [
     # Paths del core
     path('', include('core.urls')),
     # Paths del admin
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    # Para ver los archivos estaticos
+    from django.conf.urls.static import static
+
+    # Se agrega las direcciones para visualizar
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
