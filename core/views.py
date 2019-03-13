@@ -21,9 +21,9 @@ def contact(request):
     #return HttpResponse("Hello, world. You're at Contacto contact/")
     return render(request, "core/contact.html")
 
-def blog(request):
+""" def blog(request):
     #return HttpResponse("Hello, world. You're at Blog blog/")
-    return render(request, "core/blog.html")
+    return render(request, "core/blog.html") """
 
 def sample(request):
     return HttpResponse("Hello, world. You're at Sample sample/ (esta es para páginas de prueba)")
