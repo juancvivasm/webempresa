@@ -4,7 +4,9 @@
 {% block title %}Blog{% endblock %}
 
 {% block message %}
-  {% for post in posts %}
+  {% comment %} {% for post in posts %} {% endcomment %}
+  {% comment %} {% for post in category.post_set.all %} {% endcomment %}
+  {% for post in category.get_posts.all %}
     <section class="page-section cta">
       <div class="container">
         <div class="row">
