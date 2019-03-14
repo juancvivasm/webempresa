@@ -25,5 +25,5 @@ def contact(request):
     #return HttpResponse("Hello, world. You're at Blog blog/")
     return render(request, "core/blog.html") """
 
-def sample(request):
-    return HttpResponse("Hello, world. You're at Sample sample/ (esta es para páginas de prueba)")
+""" def sample(request):
+    return HttpResponse("Hello, world. You're at Sample sample/ (esta es para páginas de prueba)") """
