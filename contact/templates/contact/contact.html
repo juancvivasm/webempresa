@@ -22,9 +22,18 @@
                 <!-- <ul>
                   {{ form.as_ul }}
                 </ul> -->
-                <table>
-                  {{ form.as_table }}
-                </table>
+                {% if 'ok' in request.GET %}
+                  {# Do something special #}
+                  <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos en contacto con usted</p></b>
+                {% endif %}
+                <form action="" method="POST">
+                  {% csrf_token %}
+                  <table>
+                    {{ form.as_table }}
+                  </table>
+                  <input type="submit" value="Enviar" />
+                </form>
+                <!-- {{ request.POST }} -->
                 
                 <!--<form>
                     <div class="form-group">
