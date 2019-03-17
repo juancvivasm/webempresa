@@ -17,9 +17,9 @@ def store(request):
     #return HttpResponse("Hello, world. You're at Visítanos store/")
     return render(request, "core/store.html")
 
-def contact(request):
+""" def contact(request):
     #return HttpResponse("Hello, world. You're at Contacto contact/")
-    return render(request, "core/contact.html")
+    return render(request, "core/contact.html") """
 
 """ def blog(request):
     #return HttpResponse("Hello, world. You're at Blog blog/")
