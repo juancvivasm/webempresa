@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for webempresa project.
 
@@ -84,10 +85,10 @@ WSGI_APPLICATION = 'webempresa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'webempresa',
-        'USER': 'postgres',
-        'PASSWORD': 'jc159',
-        'HOST': '127.0.0.1',
+        'NAME': 'd7fu4qnpf6fvqn',
+        'USER': 'ylwbukxyhsyrcc',
+        'PASSWORD': '92dbee08961c6f78f5bb1c7c356ba088f2f206f03c691ef13311cf52f7f159f2',
+        'HOST': 'ec2-23-21-106-241.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -153,3 +154,5 @@ EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = '9bb31e01eab1fe'
 EMAIL_HOST_PASSWORD = '38809a1097e944'
 EMAIL_PORT = '2525'
+
+django_heroku.settings(locals())
